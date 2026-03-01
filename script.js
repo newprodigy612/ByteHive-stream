@@ -1,6 +1,7 @@
 const collections = [
     {
         categoryName: "One Piece",
+        categoryImage: "onepiece.jpg", // The image for the header
         videos: [
             { title: "Episode 962", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1XsUm-Y_1mcD9Z4EHFmmCKPQqXIC9eMWi/preview" },
             { title: "Episode 969", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1ZuwCz_fh2D56kGh4-w2zZHHGLg-dRrAy/preview" },
@@ -9,12 +10,14 @@ const collections = [
     },
     {
         categoryName: "KaijU NO.8",
-        videos: [ // Changed from VIDEOS to videos to match the loop
+        categoryImage: "kaiju.jpg", // The image for the header
+        videos: [ 
             { title: "Episode 01", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview" }
         ]
     },
     {
         categoryName: "Other Clips",
+        categoryImage: "ByteHive.jpg", // The image for the header
         videos: [
             { title: "ByteHive Showcase", poster: "ByteHive.jpg", embedUrl: "" }
         ]
@@ -27,10 +30,13 @@ collections.forEach((collection) => {
     const section = document.createElement("div");
     section.className = "category-section";
     
-    // Create a clickable header and a hidden grid
+    // Updated header HTML to include the small category image
     section.innerHTML = `
         <div class="category-header">
-            <h2 class="category-title">${collection.categoryName}</h2>
+            <div class="header-left">
+                <img src="${collection.categoryImage}" class="category-icon" alt="">
+                <h2 class="category-title">${collection.categoryName}</h2>
+            </div>
             <span class="dropdown-arrow">▼</span>
         </div>
         <div class="video-grid hidden"></div>
@@ -40,7 +46,6 @@ collections.forEach((collection) => {
     const grid = section.querySelector(".video-grid");
     const arrow = section.querySelector(".dropdown-arrow");
 
-    // Toggle visibility on click
     header.onclick = () => {
         const isHidden = grid.classList.toggle("hidden");
         arrow.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
@@ -51,7 +56,7 @@ collections.forEach((collection) => {
         card.className = "video-card";
         if (video.embedUrl) {
             card.onclick = (e) => {
-                e.stopPropagation(); // Prevents closing the dropdown when clicking a video
+                e.stopPropagation(); 
                 openModal(video.embedUrl);
             };
         }
@@ -71,7 +76,6 @@ collections.forEach((collection) => {
     container.appendChild(section);
 });
 
-// Modal functions remain the same
 function openModal(url) {
     if (!url) return;
     const modal = document.getElementById("videoModal");
@@ -87,3 +91,9 @@ function closeVideo() {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("videoModal")) {
+        closeVideo();
+    }
+};
