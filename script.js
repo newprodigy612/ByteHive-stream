@@ -11,6 +11,11 @@ const collections = [
                  title: "Episode 969", 
                 poster: "onepiece.jpg", 
                 embedUrl: "https://drive.google.com/file/d/1ZuwCz_fh2D56kGh4-w2zZHHGLg-dRrAy/preview" 
+            },
+            {
+                title: "Episode 970", 
+                poster: "onepiece.jpg", 
+                embedUrl: "https://drive.google.com/file/d/1G-jMuqoKT-s19Cv6_Xv1LO4Q8-DQ2mkZ/preview"
             }
             
            
@@ -90,3 +95,4 @@ window.onclick = function(event) {
     }
 
 }
+
