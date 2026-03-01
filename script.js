@@ -4,12 +4,12 @@ const collections = [
         videos: [
             { 
                 title: "Episode 962", 
-                poster: "https://i.animepahe.si/posters/14fdc4bb11b03ddd1e803582730fea4ab4782e7974ccf54e558dd50cd207f639.jpg", 
+                poster: "onepiece.jpg", 
                 embedUrl: "https://drive.google.com/file/d/1XsUm-Y_1mcD9Z4EHFmmCKPQqXIC9eMWi/preview" 
             },
             {
                  title: "Episode 969", 
-                poster: "https://i.animepahe.si/posters/14fdc4bb11b03ddd1e803582730fea4ab4782e7974ccf54e558dd50cd207f639.jpg", 
+                poster: "onepiece.jpg", 
                 embedUrl: "https://drive.google.com/file/d/1ZuwCz_fh2D56kGh4-w2zZHHGLg-dRrAy/preview" 
             }
             
@@ -88,4 +88,5 @@ window.onclick = function(event) {
     if (event.target == document.getElementById("videoModal")) {
         closeVideo();
     }
+
 }
