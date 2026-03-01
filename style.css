@@ -264,3 +264,32 @@ body {
     display: grid !important;
     opacity: 1;
 }
+
+/* Styling the clickable header area */
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: var(--bh-card);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.category-header:hover {
+    background: #252525;
+}
+
+/* Arrow animation */
+.dropdown-arrow {
+    color: var(--bh-gold);
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+/* Hides the grid by default */
+.video-grid.hidden {
+    display: none;
+}
