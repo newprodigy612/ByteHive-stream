@@ -13,6 +13,7 @@ const collections = [
         categoryImage: "kaiju.jpg", // The image for the header
         videos: [ 
             { title: "Episode 01", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview" }
+            { title: "Episode 02", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1cvXQCSHoRoxGVbY1EYH13IRbd_SjAbmV/preview" }
         ]
     },
     {
@@ -97,4 +98,5 @@ window.onclick = function(event) {
         closeVideo();
     }
 };
+
 
