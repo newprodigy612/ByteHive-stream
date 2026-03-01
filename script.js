@@ -14,7 +14,7 @@ const collections = [
         ]
     },
     {
-        categoryName: "Other Clips",
+        categoryName: "About The Creators",
         videos: [
             { title: "ByteHive Showcase", poster: "ByteHive.jpg", embedUrl: "" }
         ]
@@ -93,3 +93,4 @@ window.onclick = function(event) {
         closeVideo();
     }
 };
+
