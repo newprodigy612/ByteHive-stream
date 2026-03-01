@@ -330,3 +330,40 @@ body {
     gap: 25px;
     padding: 20px 0;
 }
+
+/* Container for the Image and Title */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and text */
+}
+
+/* The small category image */
+.category-icon {
+    width: 50px;       /* Small size */
+    height: 50px;
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover;  /* Keeps image from stretching */
+    border: 1px solid var(--bh-gold);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bh-card);
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--bh-gold);
+}
+
+.category-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.video-grid.hidden {
+    display: none;
+}
