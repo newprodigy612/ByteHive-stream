@@ -21,11 +21,11 @@ const collections = [
            
                ]
     },
-    {
+   {
         categoryName: "KaijU NO.8",
-        VIDEOS: [
+        videos: [ // Change from VIDEOS to videos
             {
-             title: "Episode 01", 
+                title: "Episode 01", 
                 poster: "kaiju.jpg", 
                 embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview"   
             }
@@ -105,4 +105,5 @@ window.onclick = function(event) {
     }
 
 }
+
 
