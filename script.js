@@ -17,13 +17,11 @@ const collections = [
                 poster: "onepiece.jpg", 
                 embedUrl: "https://drive.google.com/file/d/1G-jMuqoKT-s19Cv6_Xv1LO4Q8-DQ2mkZ/preview"
             }
-            
-           
-               ]
+        ]
     },
-   {
+    {
         categoryName: "KaijU NO.8",
-        videos: [ // Change from VIDEOS to videos
+        videos: [ // Fixed from VIDEOS to videos
             {
                 title: "Episode 01", 
                 poster: "kaiju.jpg", 
@@ -37,7 +35,7 @@ const collections = [
             { 
                 title: "ByteHive Showcase", 
                 poster: "ByteHive.jpg", 
-                embedUrl: "" // Add another Drive preview link here
+                embedUrl: "" 
             }
         ]
     }
@@ -45,30 +43,44 @@ const collections = [
 
 const container = document.getElementById("video-container");
 
-// Generate Categorized Layout
 collections.forEach((collection) => {
     const section = document.createElement("div");
     section.className = "category-section";
-    section.id = collection.categoryName.replace(/\s+/g, '-'); 
     
+    // Create the header with a drop-down arrow
     section.innerHTML = `
-        <h2 class="category-title">${collection.categoryName}</h2>
-        <div class="video-grid"></div>
+        <div class="category-header">
+            <h2 class="category-title">${collection.categoryName}</h2>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="video-grid hidden"></div>
     `;
 
+    const header = section.querySelector(".category-header");
     const grid = section.querySelector(".video-grid");
+    const arrow = section.querySelector(".dropdown-arrow");
+
+    // Toggle visibility on click
+    header.onclick = () => {
+        const isHidden = grid.classList.toggle("hidden");
+        arrow.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+    };
 
     collection.videos.forEach((video) => {
         const card = document.createElement("div");
         card.className = "video-card";
-        card.onclick = () => openModal(video.embedUrl);
+        
+        if (video.embedUrl) {
+            card.onclick = (e) => {
+                e.stopPropagation(); // Prevents closing the menu when clicking a video
+                openModal(video.embedUrl);
+            };
+        }
 
         card.innerHTML = `
             <div class="thumbnail-container">
                 <img src="${video.poster}" alt="${video.title}">
-                <div class="play-overlay">
-                    <div class="play-button-icon">▶</div>
-                </div>
+                ${video.embedUrl ? `<div class="play-overlay"><div class="play-button-icon">▶</div></div>` : ''}
             </div>
             <div class="video-info">
                 <h3>${video.title}</h3>
@@ -80,7 +92,6 @@ collections.forEach((collection) => {
     container.appendChild(section);
 });
 
-// Modal Player Control
 function openModal(url) {
     if (!url) return;
     const modal = document.getElementById("videoModal");
@@ -98,12 +109,9 @@ function closeVideo() {
     document.body.style.overflow = "auto";
 }
 
-// Close if clicking outside the player
 window.onclick = function(event) {
-    if (event.target == document.getElementById("videoModal")) {
+    const modal = document.getElementById("videoModal");
+    if (event.target == modal) {
         closeVideo();
     }
-
-}
-
-
+};
