@@ -224,4 +224,43 @@ body {
     height: 100%;
     border: 2px solid var(--bh-gold);
     border-radius: 12px;
+
+}
+/* Drop-down Specific Styles */
+.drop-down-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.drop-down-header:hover {
+    background: rgba(255, 204, 0, 0.1);
+}
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    color: var(--bh-gold);
+}
+
+.active-header .arrow {
+    transform: rotate(180deg);
+}
+
+/* Initially hide the grid */
+.hidden-grid {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20px;
+}
+
+/* Show the grid when active */
+.show-grid {
+    display: grid !important;
+    opacity: 1;
 }
