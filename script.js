@@ -1,6 +1,6 @@
 const collections = [
     {
-        categoryName: "One Piece Episodes",
+        categoryName: "One Piece",
         videos: [
             { 
                 title: "Episode 962", 
@@ -20,6 +20,16 @@ const collections = [
             
            
                ]
+    },
+    {
+        categoryName: "KaijU NO.8",
+        VIDEOS: [
+            {
+             title: "Episode 01", 
+                poster: "kaiju.jpg", 
+                embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview"   
+            }
+        ]
     },
     {
         categoryName: "Other Clips",
