@@ -9,12 +9,12 @@ const collections = [
     },
     {
         categoryName: "KaijU NO.8",
-        videos: [ // Fixed the VIDEOS typo here
+        videos: [ // Changed from VIDEOS to videos to match the loop
             { title: "Episode 01", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview" }
         ]
     },
     {
-        categoryName: "About The Creators",
+        categoryName: "Other Clips",
         videos: [
             { title: "ByteHive Showcase", poster: "ByteHive.jpg", embedUrl: "" }
         ]
@@ -27,7 +27,7 @@ collections.forEach((collection) => {
     const section = document.createElement("div");
     section.className = "category-section";
     
-    // Create a header that includes the arrow
+    // Create a clickable header and a hidden grid
     section.innerHTML = `
         <div class="category-header">
             <h2 class="category-title">${collection.categoryName}</h2>
@@ -40,7 +40,7 @@ collections.forEach((collection) => {
     const grid = section.querySelector(".video-grid");
     const arrow = section.querySelector(".dropdown-arrow");
 
-    // Toggle the "hidden" class when the header is clicked
+    // Toggle visibility on click
     header.onclick = () => {
         const isHidden = grid.classList.toggle("hidden");
         arrow.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
@@ -51,7 +51,7 @@ collections.forEach((collection) => {
         card.className = "video-card";
         if (video.embedUrl) {
             card.onclick = (e) => {
-                e.stopPropagation(); // Stop the dropdown from closing when clicking a video
+                e.stopPropagation(); // Prevents closing the dropdown when clicking a video
                 openModal(video.embedUrl);
             };
         }
@@ -71,7 +71,7 @@ collections.forEach((collection) => {
     container.appendChild(section);
 });
 
-// Modal controls remain the same
+// Modal functions remain the same
 function openModal(url) {
     if (!url) return;
     const modal = document.getElementById("videoModal");
@@ -87,10 +87,3 @@ function closeVideo() {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
-
-window.onclick = function(event) {
-    if (event.target == document.getElementById("videoModal")) {
-        closeVideo();
-    }
-};
-
