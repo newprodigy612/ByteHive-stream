@@ -16,10 +16,10 @@ const collections = [
         ]
     },
     {
-        categoryName: "Other Clips",
+        categoryName: "About The Creators",
         categoryImage: "ByteHive.jpg", // The image for the header
         videos: [
-            { title: "ByteHive Showcase", poster: "ByteHive.jpg", embedUrl: "" }
+            { title: "ByteHive.Inc", poster: "ByteHive.jpg", embedUrl: "" }
         ]
     }
 ];
@@ -97,3 +97,4 @@ window.onclick = function(event) {
         closeVideo();
     }
 };
+
