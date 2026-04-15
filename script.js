@@ -1,11 +1,9 @@
 const collections = [
     {
-        categoryName: "One Piece",
+        categoryName: "One Piece-S2",
         categoryImage: "onepiece.jpg", // The image for the header
         videos: [
-            { title: "Episode 962", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1XsUm-Y_1mcD9Z4EHFmmCKPQqXIC9eMWi/preview" },
-            { title: "Episode 969", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1ZuwCz_fh2D56kGh4-w2zZHHGLg-dRrAy/preview" },
-            { title: "Episode 970", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1G-jMuqoKT-s19Cv6_Xv1LO4Q8-DQ2mkZ/preview" }
+            { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1G-jMuqoKT-s19Cv6_Xv1LO4Q8-DQ2mkZ/preview" }
         ]
     },
     {
