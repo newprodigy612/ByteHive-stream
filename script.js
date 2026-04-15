@@ -3,7 +3,7 @@ const collections = [
         categoryName: "One Piece-S2",
         categoryImage: "onepiece.jpg", // The image for the header
         videos: [
-            { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1G-jMuqoKT-s19Cv6_Xv1LO4Q8-DQ2mkZ/preview" }
+            { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1NtHZIOc822Tww-kgyVscceZPwi5pLh6R/preview" }
         ]
     },
     {
