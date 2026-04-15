@@ -3,7 +3,7 @@ const collections = [
         categoryName: "One Piece-S2",
         categoryImage: "onepiece.jpg", // The image for the header
         videos: [
-            { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1NtHZIOc822Tww-kgyVscceZPwi5pLh6R/preview" }
+            { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1CrWLJXp4gymE88yS53mkm6TshvXHiH_-/preview" }
         ]
     },
     {
@@ -12,7 +12,8 @@ const collections = [
         videos: [ 
             { title: "Episode 01", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1vucYtLiFYQJz3yrrc7ekZU3vCu_ymqq1/preview" },
             { title: "Episode 02", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1cvXQCSHoRoxGVbY1EYH13IRbd_SjAbmV/preview" },
-            { title: "Episode 03", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/16kQCvD5xSFKJe1oWkZiIQL6W8gZLWQ35/preview" }
+            { title: "Episode 03", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/16kQCvD5xSFKJe1oWkZiIQL6W8gZLWQ35/preview" },
+            { title: "Episode 04", poster: "kaiju.jpg", embedUrl: "https://drive.google.com/file/d/1NtHZIOc822Tww-kgyVscceZPwi5pLh6R/preview" }
         ]
     },
     {
