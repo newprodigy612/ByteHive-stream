@@ -17,6 +17,13 @@ const collections = [
         ]
     },
     {
+        categoryName: "MAO",
+        categoryImage: "mao.jpg",
+        videos: [
+            { title: "episode 1", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1Z7MR9Tn1rRAezqW7zyCGoiM-BspbHh_D/preview" }
+        ]
+    },
+    {
         categoryName: "About The Creators",
         categoryImage: "ByteHive.jpg", // The image for the header
         videos: [
