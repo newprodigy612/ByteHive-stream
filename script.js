@@ -21,6 +21,7 @@ const collections = [
         categoryImage: "mao.jpg",
         videos: [
             { title: "episode 1", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1Z7MR9Tn1rRAezqW7zyCGoiM-BspbHh_D/preview" }
+            { title: "episode 2", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1AkI4gxmvmFMwpRDaxgLh4zMrEsWx1YAs/preview" }
         ]
     },
     {
