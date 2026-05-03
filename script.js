@@ -4,7 +4,8 @@ const collections = [
         categoryImage: "onepiece.jpg", // The image for the header
         videos: [
             { title: "Episode 1157", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1CrWLJXp4gymE88yS53mkm6TshvXHiH_-/preview" },
-            { title: "Episode 1158", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1p6IrWiMss3V0kZ9EZ3SlayShueVoRHls/preview" }
+            { title: "Episode 1158", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1p6IrWiMss3V0kZ9EZ3SlayShueVoRHls/preview" },
+            { title: "Episode 1159", poster: "onepiece.jpg", embedUrl: "https://drive.google.com/file/d/1FRDewJsBqAxfzZwfhTHNU5xh8CWOM9jG/preview" }
         ]
     },
     {
@@ -23,7 +24,8 @@ const collections = [
         videos: [
             { title: "episode 1", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1Z7MR9Tn1rRAezqW7zyCGoiM-BspbHh_D/preview" },
             { title: "episode 2", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1AkI4gxmvmFMwpRDaxgLh4zMrEsWx1YAs/preview" },
-            { title: "episode 3", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1GgbiLBRXmr6yA8BXIDZW1OKNkuM-wxb5/preview" }
+            { title: "episode 3", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1GgbiLBRXmr6yA8BXIDZW1OKNkuM-wxb5/preview" },
+            { title: "episode 4", poster: "mao.jpg", embedUrl: "https://drive.google.com/file/d/1ITRhRs9RHEK8USrC5YVYRhjwuamecd92/preview" }
         ]
     },
     {
